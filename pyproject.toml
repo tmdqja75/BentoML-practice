@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "bentoml-tutorial"
+version = "0.1.0"
+description = ""
+authors = ["seungbeom <tmdqja75@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+transformers = "^4.44.0"
+torch = "^2.4.0"
+bentoml = "^1.3.2"
+openllm = "^0.6.10"
+scikit-learn = "^1.5.1"
+xgboost = "^2.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
