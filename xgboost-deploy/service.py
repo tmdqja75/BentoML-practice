@@ -15,6 +15,8 @@ class CancerClassifier:
     def __init__(self):
         self.model = bentoml.xgboost.load_model(self.bento_model)
 
-        if os.getenv()
-
+    @bentoml.api
+    def predict(self, data:np.ndarray) -> np.ndarray:
+        return self.model.predict(xgb.DMatrix(data))
+    
         
