@@ -11,8 +11,6 @@ cancer_data = t.cast("ext.NpNDArray", cancer.data)
 cancer_target = t.cast("ext.NpNDArray", cancer.target)
 dt = xgb.DMatrix(cancer_data, label=cancer_target)
 
-print('data loaded')
-
 # Specify model parameters
 param = {
     "max_depth": 3,
@@ -24,5 +22,7 @@ param = {
 # Train the model
 model = xgb.train(param, dt)
 
-bentoml.xgboost.save_model('cancer', model)
+
+# Specify the model name and the model to be saved
+bentoml.xgboost.save_model("cancer", model)
 
