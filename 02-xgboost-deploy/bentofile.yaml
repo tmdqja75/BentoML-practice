@@ -1,0 +1,14 @@
+service: service:CancerClassifier
+labels:
+  owner: bentoml-team
+  project: testing
+include:
+  - "service.py"
+exclude:
+  - "*.pyc"
+models:
+  - cancer:latest
+python:
+  packages:
+    - xgboost
+    - numpy
